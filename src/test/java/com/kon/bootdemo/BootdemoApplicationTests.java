@@ -11,6 +11,9 @@ public class BootdemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
+		System.out.print("hello world!");
+
 	}
 
 }

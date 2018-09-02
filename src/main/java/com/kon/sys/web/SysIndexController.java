@@ -9,7 +9,7 @@ public class SysIndexController {
 
     @RequestMapping("index")
     public String doIndex(){
-        return "index";
+        return "index.html";
     }
 
 

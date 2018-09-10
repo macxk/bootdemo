@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.kon.*")
+@ComponentScan({"com.kon.*","com.baidu.*"})
 public class BootdemoApplication {
 
 	public static void main(String[] args) {

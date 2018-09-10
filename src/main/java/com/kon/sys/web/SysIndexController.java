@@ -3,7 +3,7 @@ package com.kon.sys.web;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+/*@Controller*/
 @RequestMapping("sysIndex")
 public class SysIndexController {
 

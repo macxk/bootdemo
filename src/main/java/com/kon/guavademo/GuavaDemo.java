@@ -1,14 +1,14 @@
 package com.kon.guavademo;
 
 import com.google.common.base.*;
-import com.google.common.collect.FluentIterable;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
+import com.google.common.collect.*;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
 import java.util.*;
 
+/**
+ * 用例来自guava工具类学习
+ */
 public class GuavaDemo {
 
     public static void MapToString(){
@@ -146,6 +146,43 @@ public class GuavaDemo {
         }
     }
 
+    // 一键多值类Multimap
+    public static void MultimapDemo(){
+
+        ArrayListMultimap<String,String> multimap = ArrayListMultimap.create();
+        multimap.put("foo","1");
+        multimap.put("foo","2");
+        multimap.put("foo","3");
+        multimap.put("bar","a");
+        multimap.put("bar","b");
+        multimap.put("bar","c");
+
+        for(String key:multimap.keySet()){
+            System.out.println(multimap.get(key));
+        }
+    }
+
+    // 多键类Table
+    public static void HashBasedTableDemo(){
+
+        HashBasedTable<Integer,Integer,String> table = HashBasedTable.create();
+        table.put(1,1,"xk");
+        table.put(1,2,"zmy");
+        table.put(1,3,"db");
+
+        System.out.println(table.get(1,1));
+        System.out.println(table.get(1,2));
+        System.out.println(table.get(1,3));
+        table.remove(1,2);
+        System.out.println(table.get(1,2));
+
+        Map<Integer,String> row = table.row(1);
+        Map<Integer,String> column = table.column(1);
+
+        System.out.println(row);
+        System.out.print(column);
+    }
+
     public static void main(String[] args){
 
         MapToString();
@@ -162,6 +199,9 @@ public class GuavaDemo {
 
         ListToMap();
 
+        MultimapDemo();
+
+        HashBasedTableDemo();
 
     }
 }

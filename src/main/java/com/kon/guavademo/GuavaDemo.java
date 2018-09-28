@@ -185,7 +185,8 @@ public class GuavaDemo {
     }
 
     public static void OptionalDemo(){
-        System.out.println(Optional.fromNullable(new HashMap<>()).get().get("demo"));
+        Person p =null;
+        System.out.println(Optional.fromNullable(p).or(new Person()).getName());
     }
 
     public static void main(String[] args){

@@ -1,14 +1,11 @@
 package com.kon.restclientdemo;
 
-import okio.Utf8;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.HashMap;
 
 public class RestClientDemo {
 
@@ -22,6 +19,7 @@ public class RestClientDemo {
         System.out.println(obj);
 
     }
+
 
     public static void main(String[] a){
 

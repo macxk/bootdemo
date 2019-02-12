@@ -1,6 +1,7 @@
 package com.kon.guavademo;
 
 import com.google.common.base.*;
+import com.google.common.base.Optional;
 import com.google.common.collect.*;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
@@ -183,6 +184,11 @@ public class GuavaDemo {
         System.out.print(column);
     }
 
+    public static void OptionalDemo(){
+        Person p =null;
+        System.out.println(Optional.fromNullable(p).or(new Person()).getName());
+    }
+
     public static void main(String[] args){
 
         MapToString();
@@ -202,6 +208,8 @@ public class GuavaDemo {
         MultimapDemo();
 
         HashBasedTableDemo();
+
+        OptionalDemo();
 
     }
 }
